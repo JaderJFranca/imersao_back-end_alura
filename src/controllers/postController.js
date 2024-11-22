@@ -1,5 +1,6 @@
 import fs from "fs";
-import { getAllPosts, createPost } from "../models/postModels.js";
+import { getAllPosts, createPost, updatePost } from "../models/postModels.js";
+import createDescriptionWithGemini from "../services/geminiService.js"
 
 export async function listPosts (req, res)
 {
@@ -33,5 +34,26 @@ export async function uploadImg(req, res) {
     } catch(erro) {
         console.error(erro.message);
         res.status(500).json({"Erro":"Falha na requisição."})
+    }
+}
+
+export async function updateNewPost(req, res){
+    const id = req.params.id;
+    const urlImg = `http://localhost:3000/${id}.png`
+    try {
+        const imgBuffer = fs.readFileSync(`uploads/${id}.png`)
+        const description = await createDescriptionWithGemini(imgBuffer)
+
+        const post = {
+            imgUrl: urlImg,
+            descricao: description,
+            alt: req.body.alt
+        }
+
+        const createdPost = await updatePost(id, post);
+        res.status(200).json(createdPost);
+    } catch(erro) {
+        console.error(erro.message);
+        res.status(500).json({"Erro":"Falha na requisição."});
     }
 }

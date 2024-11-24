@@ -16,9 +16,6 @@ Um projeto desenvolvido como uma rede social de compartilhamento de imagens seme
 ### `GET /posts`
 Retorna todas as postagens cadastradas no sistema.
 
-### `POST /posts`
-Cadastra uma nova postagem com um objeto JSON contendo os detalhes da imagem.
-
 ### `POST /upload`
 Realiza o upload de uma imagem para o servidor.
 
@@ -30,7 +27,7 @@ Atualiza a descrição ou outros detalhes da postagem correspondente ao `id`.
 1. Clone o repositório.
 2. Instale as dependências com `npm install`.
 3. Configure a variável de ambiente `STRING_CONNECTION` com a URL de conexão do MongoDB.
-4. Inicie o servidor com o comando `npm start`.
+4. Inicie o servidor com o comando `npm run dev`.
 5. Use o Postman ou uma aplicação frontend para consumir a API.
 
 ## Capturas de Tela

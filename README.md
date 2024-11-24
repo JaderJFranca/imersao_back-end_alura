@@ -1,4 +1,4 @@
-![2](https://github.com/user-attachments/assets/5e367ea9-12fd-47b9-bc6e-48834665be5f)# Imersão Back-End Alura
+# Imersão Back-End Alura
 
 Um projeto desenvolvido como uma rede social de compartilhamento de imagens semelhante ao Instagram. Ele permite o upload, listagem e atualização de postagens com descrições e imagens, usando MongoDB como banco de dados e Express.js no backend.
 
@@ -36,15 +36,12 @@ Atualiza a descrição ou outros detalhes da postagem correspondente ao `id`.
 ## Capturas de Tela
 
 ### Postagens no MongoDB
-![MongoDB]
 ![4](https://github.com/user-attachments/assets/49f24285-f471-44a9-9214-e03cc992bc4a)
 
 ### Testando a API com Postman
-![Postman]
 ![2](https://github.com/user-attachments/assets/50921125-9bbf-4285-bccf-76ce66d5d5b1)
 
 ### Interface Visual (Exemplo)
-![Interface]
 ![3](https://github.com/user-attachments/assets/5fc5e55b-1754-43fb-98a8-883ced0d7840)
 
 
